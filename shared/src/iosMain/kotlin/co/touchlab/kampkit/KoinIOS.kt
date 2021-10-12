@@ -20,6 +20,7 @@ fun initKoinIos(
     doOnStartup: () -> Unit
 ): KoinApplication = initKoin(
     module {
+        println("koin init happened")
         single<Settings> { AppleSettings(userDefaults) }
         single { appInfo }
         single { doOnStartup }

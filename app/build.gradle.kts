@@ -1,6 +1,8 @@
 plugins {
     id("com.android.application")
     kotlin("android")
+    id("com.google.gms.google-services")
+    id("com.google.firebase.crashlytics")
 }
 
 android {
@@ -51,4 +53,8 @@ dependencies {
     coreLibraryDesugaring(libs.android.desugaring)
     implementation(libs.koin.android)
     testImplementation(libs.junit)
+
+    implementation (platform("com.google.firebase:firebase-bom:28.4.0"))
+    implementation("com.google.firebase:firebase-analytics-ktx")
+    implementation("com.google.firebase:firebase-crashlytics-ktx")
 }

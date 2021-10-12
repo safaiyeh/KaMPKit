@@ -61,6 +61,7 @@ class NativeViewModel(
     }
 
     fun refreshBreeds(forced: Boolean = false) {
+        throw IllegalStateException("oopsies")
         scope.launch {
             log.v { "refreshBreeds" }
             breedModel.refreshBreedsIfStale(forced).collect { dataState ->

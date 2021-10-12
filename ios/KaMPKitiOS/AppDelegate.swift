@@ -8,6 +8,7 @@
 
 import SwiftUI
 import shared
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,12 +17,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     // Lazy so it doesn't try to initialize before startKoin() is called
     // swiftlint:disable force_cast
-    lazy var log = LoggerKt.withTag(tag: "AppDelegate")
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions
-        launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
+    func application(_ application: UIApplication,
+                     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        FirebaseApp.configure()
         startKoin()
+        // FIXME:
+        // TODO: 
 
         let viewController = UIHostingController(rootView: BreedListScreen())
 
@@ -29,7 +32,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window?.rootViewController = viewController
         self.window?.makeKeyAndVisible()
 
-        log.v {"App Started"}
         return true
     }
 }

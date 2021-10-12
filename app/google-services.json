@@ -1,0 +1,82 @@
+{
+  "project_info": {
+    "project_number": "443141027708",
+    "project_id": "kermittest-2e896",
+    "storage_bucket": "kermittest-2e896.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:443141027708:android:0c566116286d6aa742d6f9",
+        "android_client_info": {
+          "package_name": "co.touchlab.kampkit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "443141027708-2cvkcn1j7bte5paeplcooahck80s2f8r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC2gQjmeWg9opCyPBK2wu3qC9eQgZb7iWo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "443141027708-2cvkcn1j7bte5paeplcooahck80s2f8r.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "443141027708-4s3o4rkr0p1cfb251md6kdv06ei1fmsi.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "co.touchlab.KermitSampleIOS"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:443141027708:android:c8af9902c260355742d6f9",
+        "android_client_info": {
+          "package_name": "co.touchlab.kermitsamplecrashlog"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "443141027708-2cvkcn1j7bte5paeplcooahck80s2f8r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC2gQjmeWg9opCyPBK2wu3qC9eQgZb7iWo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "443141027708-2cvkcn1j7bte5paeplcooahck80s2f8r.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "443141027708-4s3o4rkr0p1cfb251md6kdv06ei1fmsi.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "co.touchlab.KermitSampleIOS"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

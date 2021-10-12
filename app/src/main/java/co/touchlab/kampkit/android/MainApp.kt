@@ -6,6 +6,8 @@ import android.content.SharedPreferences
 import android.util.Log
 import co.touchlab.kampkit.AppInfo
 import co.touchlab.kampkit.initKoin
+import co.touchlab.kermit.Logger
+import co.touchlab.kermit.Severity
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 
@@ -13,6 +15,7 @@ class MainApp : Application() {
 
     override fun onCreate() {
         super.onCreate()
+        // Logger.addLogWriter(CrashlyticsLogWriter(minSeverity = Severity.Debug))
         initKoin(
             module {
                 single<Context> { this@MainApp }
@@ -22,7 +25,7 @@ class MainApp : Application() {
                 }
                 single<AppInfo> { AndroidAppInfo }
                 single {
-                    { Log.i("Startup", "Hello from Android/Kotlin!") }
+                    { Logger.withTag("Startup").i("Hello from Android/Kotlin!") }
                 }
             }
         )

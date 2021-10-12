@@ -15,9 +15,13 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.Divider
+import androidx.compose.material.FloatingActionButton
+import androidx.compose.material.Icon
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.AddCircle
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
@@ -61,6 +65,12 @@ fun MainScreen(
         },
         onFavorite = { viewModel.updateBreedFavorite(it) }
     )
+    FloatingActionButton(onClick = {
+        Logger.d("got exception here?", IllegalArgumentException("ill arg"))
+        throw Exception("crash button hit")
+    }) {
+        Icon(Icons.Default.AddCircle, null)
+    }
 }
 
 @Composable

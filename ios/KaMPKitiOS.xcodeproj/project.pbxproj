@@ -11,6 +11,9 @@
 		46A5B5EF26AF54F7002EFEAA /* BreedListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A5B5EE26AF54F7002EFEAA /* BreedListScreen.swift */; };
 		46A5B60826B04921002EFEAA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46A5B60626B04920002EFEAA /* Main.storyboard */; };
 		46B5284D249C5CF400A7725D /* Koin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46B5284C249C5CF400A7725D /* Koin.swift */; };
+		76E51BBB2710BC6600F6D8CD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 76E51BBA2710BC6600F6D8CD /* GoogleService-Info.plist */; };
+		76E51BBC2710BC6600F6D8CD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 76E51BBA2710BC6600F6D8CD /* GoogleService-Info.plist */; };
+		76E51BBD2710BC6600F6D8CD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 76E51BBA2710BC6600F6D8CD /* GoogleService-Info.plist */; };
 		F1465F0123AA94BF0055F7C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1465F0023AA94BF0055F7C3 /* AppDelegate.swift */; };
 		F1465F0A23AA94BF0055F7C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1465F0923AA94BF0055F7C3 /* Assets.xcassets */; };
 		F1465F0D23AA94BF0055F7C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1465F0B23AA94BF0055F7C3 /* LaunchScreen.storyboard */; };
@@ -41,6 +44,7 @@
 		46A5B5EE26AF54F7002EFEAA /* BreedListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedListScreen.swift; sourceTree = "<group>"; };
 		46A5B60726B04920002EFEAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		46B5284C249C5CF400A7725D /* Koin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Koin.swift; sourceTree = "<group>"; };
+		76E51BBA2710BC6600F6D8CD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B859F3FB23133D22AB9DD835 /* Pods_KaMPKitiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KaMPKitiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED1F782AF3705197012D0C33 /* Pods-KaMPKitiOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KaMPKitiOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KaMPKitiOS/Pods-KaMPKitiOS.debug.xcconfig"; sourceTree = "<group>"; };
 		F1465EFD23AA94BF0055F7C3 /* KaMPKitiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KaMPKitiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -127,6 +131,7 @@
 		F1465EFF23AA94BF0055F7C3 /* KaMPKitiOS */ = {
 			isa = PBXGroup;
 			children = (
+				76E51BBA2710BC6600F6D8CD /* GoogleService-Info.plist */,
 				F1465F0023AA94BF0055F7C3 /* AppDelegate.swift */,
 				46A5B60626B04920002EFEAA /* Main.storyboard */,
 				46B5284C249C5CF400A7725D /* Koin.swift */,
@@ -168,7 +173,8 @@
 				451A87F626D69EA40013D7F8 /* SwiftLint */,
 				F1465EFA23AA94BF0055F7C3 /* Frameworks */,
 				F1465EFB23AA94BF0055F7C3 /* Resources */,
-				1B87BED2961AED5869E290C6 /* [CP] Embed Pods Frameworks */,
+				76E51BBE2710BDEC00F6D8CD /* ShellScript */,
+				A1AE517553E3D4D34848B6AA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -264,6 +270,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				46A5B60826B04921002EFEAA /* Main.storyboard in Resources */,
+				76E51BBB2710BC6600F6D8CD /* GoogleService-Info.plist in Resources */,
 				F1465F0D23AA94BF0055F7C3 /* LaunchScreen.storyboard in Resources */,
 				F1465F0A23AA94BF0055F7C3 /* Assets.xcassets in Resources */,
 			);
@@ -273,6 +280,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76E51BBC2710BC6600F6D8CD /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,29 +288,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76E51BBD2710BC6600F6D8CD /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1B87BED2961AED5869E290C6 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-KaMPKitiOS/Pods-KaMPKitiOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-KaMPKitiOS/Pods-KaMPKitiOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KaMPKitiOS/Pods-KaMPKitiOS-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		451A87F626D69EA40013D7F8 /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -320,6 +312,42 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# For reference: https://github.com/realm/SwiftLint\n\n${PODS_ROOT}/SwiftLint/swiftlint\n";
+		};
+		76E51BBE2710BDEC00F6D8CD /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${TARGET_NAME}",
+				"$(SRCROOT)/$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/FirebaseCrashlytics/run\"\n";
+		};
+		A1AE517553E3D4D34848B6AA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KaMPKitiOS/Pods-KaMPKitiOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KaMPKitiOS/Pods-KaMPKitiOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KaMPKitiOS/Pods-KaMPKitiOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 		DE3B37D33D11C1968D62DBBA /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -535,6 +563,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = KaMPKitiOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

@@ -66,7 +66,7 @@ kotlin {
         implementation(libs.multiplatformSettings.common)
         implementation(libs.kotlinx.dateTime)
         api(libs.touchlab.kermit)
-        // api("co.touchlab:kermit-crashlytics:1.0.0-rc4")
+        api("co.touchlab:kermit-crashlytics:1.0.0-rc4")
     }
 
     sourceSets["commonTest"].dependencies {

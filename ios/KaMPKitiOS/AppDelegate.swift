@@ -16,16 +16,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     // Lazy so it doesn't try to initialize before startKoin() is called
-    // swiftlint:disable force_cast
-
-
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
+        KermitInitKt.setupKermit()
         startKoin()
-        // FIXME:
-        // TODO: 
-
         let viewController = UIHostingController(rootView: BreedListScreen())
 
         self.window = UIWindow(frame: UIScreen.main.bounds)

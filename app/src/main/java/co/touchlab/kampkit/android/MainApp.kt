@@ -8,6 +8,7 @@ import co.touchlab.kampkit.AppInfo
 import co.touchlab.kampkit.initKoin
 import co.touchlab.kermit.Logger
 import co.touchlab.kermit.Severity
+import co.touchlab.kermit.crashlytics.CrashlyticsLogWriter
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 
@@ -15,7 +16,8 @@ class MainApp : Application() {
 
     override fun onCreate() {
         super.onCreate()
-        // Logger.addLogWriter(CrashlyticsLogWriter(minSeverity = Severity.Debug))
+        Logger.addLogWriter(CrashlyticsLogWriter(minSeverity = Severity.Debug))
+
         initKoin(
             module {
                 single<Context> { this@MainApp }

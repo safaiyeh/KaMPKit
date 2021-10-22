@@ -1,18 +1,18 @@
 [versions]
 ## SDK Versions
 minSdk = "21"
-targetSdk = "30"
-compileSdk = "30"
+targetSdk = "31"
+compileSdk = "31"
 
 # Dependencies
-compose = "1.0.1"
-coroutines-native = "1.5.0-native-mt"
-multiplatformSettings = "0.7.7"
-koin = "3.0.2"
-kotlin = "1.5.21"
-ktor = "1.6.0"
+compose = "1.0.4"
+coroutines-native = "1.5.2-native-mt"
+multiplatformSettings = "0.8.1"
+koin = "3.1.2"
+kotlin = "1.5.31"
+ktor = "1.6.3"
 lifecycle = "2.4.0-alpha02"
-sqlDelight = "1.5.0"
+sqlDelight = "1.5.2"
 
 [libraries]
 
@@ -33,7 +33,7 @@ coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", ve
 
 google-accompanist-swipeRefresh = { module = "com.google.accompanist:accompanist-swiperefresh", version = "0.13.0" }
 
-gradlePlugin-android = { module = "com.android.tools.build:gradle", version = "7.0.1" }
+gradlePlugin-android = { module = "com.android.tools.build:gradle", version = "7.0.2" }
 gradlePlugin-kotlinSerialization = { module = "org.jetbrains.kotlin:kotlin-serialization", version.ref = "kotlin" }
 gradlePlugin-ktlint = { module = "org.jlleitschuh.gradle:ktlint-gradle", version = "10.0.0" }
 gradlePlugin-sqlDelight = { module = "com.squareup.sqldelight:gradle-plugin", version.ref = "sqlDelight" }
@@ -44,7 +44,7 @@ koin-android = { module = "io.insert-koin:koin-android", version.ref = "koin" }
 koin-core = { module = "io.insert-koin:koin-core", version.ref = "koin" }
 koin-test = { module = "io.insert-koin:koin-test", version.ref = "koin" }
 
-kotlinx-dateTime = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version = "0.2.1" }
+kotlinx-dateTime = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version = "0.3.0" }
 
 ktor-client-core = { module = "io.ktor:ktor-client-core", version.ref = "ktor" }
 ktor-client-ios = { module = "io.ktor:ktor-client-ios", version.ref = "ktor" }
@@ -62,8 +62,8 @@ sqlDelight-coroutinesExt = { module = "com.squareup.sqldelight:coroutines-extens
 sqlDelight-native = { module = "com.squareup.sqldelight:native-driver", version.ref = "sqlDelight" }
 sqlDelight-runtime = { module = "com.squareup.sqldelight:runtime", version.ref = "sqlDelight" }
 
-touchlab-kermit = { module = "co.touchlab:kermit", version = "1.0.0-rc4" }
-touchlab-stately = { module = "co.touchlab:stately-common", version = "1.1.7" }
+touchlab-kermit = "co.touchlab:kermit:1.0.0-rc4"
+touchlab-stately = { module = "co.touchlab:stately-common", version = "1.1.10" }
 
 turbine = { module = "app.cash.turbine:turbine", version = "0.5.2" }
 

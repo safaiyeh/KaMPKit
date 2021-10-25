@@ -32,6 +32,9 @@ kotlin {
         }
         val mobileMain by creating {
             dependsOn(commonMain)
+            dependencies {
+                implementation(libs.bundles.ktor.common)
+            }
         }
         val mobileTest by creating {
             dependsOn(commonTest)

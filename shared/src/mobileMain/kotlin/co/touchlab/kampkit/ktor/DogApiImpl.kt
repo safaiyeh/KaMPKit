@@ -48,6 +48,16 @@ class DogApiImpl : KtorApi {
         return client.get<BreedResult> {
             dogs("api/breeds/list/all")
         }
+        // val response = client.get<HttpResponse> {
+        //     dogs("api/breeds/list/all")
+        // }
+        // val jsonElement = format.parseToJsonElement(response.content.readUTF8Line()!!)
+        // println(jsonElement)
+        // val result1 = decodeFromString<BreedResult1>(jsonElement.toString())
+        // println(result1)
+        //val result1 = decodeFromString<BreedResult1>(string)
+        // return BreedResult(mapOf(), "")
+        // return decodeFromString<BreedResult>(string)
     }
 
     private fun HttpRequestBuilder.dogs(path: String) {

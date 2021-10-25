@@ -1,17 +1,13 @@
 package co.touchlab.kampkit
 
-import app.cash.turbine.test
 import co.touchlab.kampkit.db.Breed
 import co.touchlab.kampkit.mock.ClockMock
 import co.touchlab.kampkit.mock.KtorApiMock
-import co.touchlab.kampkit.models.BreedModel
 import co.touchlab.kampkit.models.DataState
-import co.touchlab.kampkit.models.ItemDataSummary
 import co.touchlab.kermit.Kermit
 import com.russhwolf.settings.MockSettings
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.FlowPreview
-import kotlinx.coroutines.flow.flattenMerge
 import kotlinx.coroutines.flow.flowOf
 import kotlinx.datetime.Clock
 import kotlin.test.AfterTest
@@ -24,7 +20,8 @@ import kotlin.time.Duration
 
 class BreedModelTest : BaseTest() {
 
-    private var model: BreedModel = BreedModel()
+    private var model: co.touchlab.kampkit.models.BreedModel =
+        co.touchlab.kampkit.models.BreedModel()
     private var kermit = Kermit()
     private var testDbConnection = testDbConnection()
     private var dbHelper = DatabaseHelper(
@@ -43,10 +40,16 @@ class BreedModelTest : BaseTest() {
         private val australianNoLike = Breed(2, "australian", 0L)
         private val australianLike = Breed(2, "australian", 1L)
         val dataStateSuccessNoFavorite = DataState(
-            data = ItemDataSummary(appenzeller, listOf(appenzeller, australianNoLike))
+            data = co.touchlab.kampkit.models.ItemDataSummary(
+                appenzeller,
+                listOf(appenzeller, australianNoLike)
+            )
         )
         private val dataStateSuccessFavorite = DataState(
-            data = ItemDataSummary(appenzeller, listOf(appenzeller, australianLike))
+            data = co.touchlab.kampkit.models.ItemDataSummary(
+                appenzeller,
+                listOf(appenzeller, australianLike)
+            )
         )
     }
 
@@ -58,10 +61,10 @@ class BreedModelTest : BaseTest() {
     @Test
     fun staleDataCheckTest() = runTest {
         val currentTimeMS = Clock.System.now().toEpochMilliseconds()
-        settings.putLong(BreedModel.DB_TIMESTAMP_KEY, currentTimeMS)
+        settings.putLong(co.touchlab.kampkit.models.BreedModel.DB_TIMESTAMP_KEY, currentTimeMS)
         assertTrue(ktorApi.calledCount == 0)
 
-        val expectedError = DataState<ItemDataSummary>(exception = "Unable to download breed list")
+        val expectedError = DataState<co.touchlab.kampkit.models.ItemDataSummary>(exception = "Unable to download breed list")
         val actualError = model.getBreedsFromNetwork(0L)
 
         assertEquals(

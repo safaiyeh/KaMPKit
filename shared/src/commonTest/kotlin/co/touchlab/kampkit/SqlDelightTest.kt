@@ -20,7 +20,7 @@ class SqlDelightTest : BaseTest() {
     @BeforeTest
     fun setup() = runTest {
         dbHelper = DatabaseHelper(
-            testDbConnection(),
+            co.touchlab.kampkit.testDbConnection(),
             Kermit(),
             Dispatchers.Default
         )

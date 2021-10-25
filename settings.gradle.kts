@@ -4,7 +4,7 @@ pluginManagement {
         gradlePluginPortal()
     }
 }
-include(":common")
+// include(":common")
 include(":app", ":shared")
 rootProject.name = "KaMPKit"
 
